@@ -10,7 +10,7 @@
 }
 
 .card-brands {
-    background-color: transparent;
+    background-color: #transparent;
     border-radius: 4px;
     text-align: center;
 }
@@ -98,5 +98,5 @@ footer {
 
 footer a {
     text-decoration: none !important;
-    color: black;
+    color: black; !important;
 }
