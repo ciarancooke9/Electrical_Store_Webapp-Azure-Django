@@ -1,32 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+
 <head>
   <title>FORTNITE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'store/style.css' %}">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <style>
+    .navbar-brand {
+        font-size: 2rem !important;
+        font-family: 'Mille', sans-serif !important;
+        text-transform: uppercase !important;
+        font-weight: bold;
+    }
+    
+    .main-navbar {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .card-brands {
+        background-color: transparent;
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    .card-brands img {
+        height: 150px;
+        border-radius: 4px;
+    
+    }
+    
+    .card{
+        width: 300px;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        border: none !important;
+        margin-bottom: 40px !important;
+    }
+    
+    .card-picture {
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .card-img-top {
+        max-width: 200px;
+    }
+    
+    .btn-products {
+        margin:  20px 0px;
+        background-color: #000 !important;
+    }
+    
+    .card hr {
+        border-top: 2px solid grey !important;
+        max-width: 60%;
+        margin-left: 0px;
+    }
+    
+    .carousel {
+        margin: 50px 0px;
+    }
+    
+    .carousel img {
+        max-height: 30rem;
+    }
+    
+    .content {
+        margin: 20px 30px;
+    }
+    
+    .content-forms {
+        margin: 40px 100px;
+    }
+    
+    h1 {
+         
+        text-align: center;
+        margin-bottom: 50px !important;
+        margin: 3rem 27rem!important;
+        border-bottom:  3px solid black;
+    
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    #navbardrop {
+        font-weight: bolder;
+        margin-right: 10px;
+        color: black;
+    }
+    
+    #navbardrop:hover {
+        color: rgba(0,0,0,.5);
+    }
+    
+    .list-inline-item {
+        color: black;
+    }
+    
+    footer {
+        background-color: #eceff1;
+    }
+    
+    footer a {
+        text-decoration: none !important;
+        color: black;
+    }
+    </style>
 </head>
 <body>
 <!-- Primary Nav -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark main-navbar">
   <!-- Brand/logo -->
-    <a class="navbar-brand" href="index.html">FORNITE</a>
+    <a class="navbar-brand" href="https://it-arch-practice-app.azurewebsites.net/store/">FORNITE</a>
   <form class="form-inline" action="/action_page.php">
     <input class="form-control form-control-sm mr-3" type="text" placeholder="Search"
     aria-label="Search">
     <i class="fas fa-search" style="color:white" aria-hidden="true"></i>
   </form>
   <ul class="nav navbar-nav ml-auto">
-    <li class="nav-item"><a class="nav-link" href="signup.html"><span class="fas fa-user"></span> Sign Up</a></li>
-    <li class="nav-item"> <a class="nav-link" href="login.html"><span class="fas fa-sign-in-alt"></span> Login</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="cart.html"><span class="fas fa-shopping-cart "></span> Cart</a> </li>
+    <li class="nav-item"><a class="nav-link" href="https://it-arch-practice-app.azurewebsites.net/signup/"><span class="fas fa-user"></span> Sign Up</a></li>
+    <li class="nav-item"> <a class="nav-link" href="https://it-arch-practice-app.azurewebsites.net/login/"><span class="fas fa-sign-in-alt"></span> Login</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="https://it-arch-practice-app.azurewebsites.net/cart/"><span class="fas fa-shopping-cart "></span> Cart</a> </li>
   </ul>
 </nav>
 
