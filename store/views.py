@@ -29,7 +29,7 @@ def signup(request):
     return render(request,"store/signup.html",context)
 
 def phones(request):
-    products = Product.objects.filter(category='Phones')
+    products = Product.objects.get(category='Phones')
     context = {
         'product': products.objects.all()
     }
