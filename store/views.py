@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from . models import Category, Product
+
 # Create your views here.
 def index(request):
     context = {
@@ -27,7 +29,8 @@ def signup(request):
     return render(request,"store/signup.html",context)
 
 def phones(request):
+    products = Product.objects.filter(category='Phones')
     context = {
-
+        'product': products.objects.all()
     }
     return render(request,"store/phones.html",context)
