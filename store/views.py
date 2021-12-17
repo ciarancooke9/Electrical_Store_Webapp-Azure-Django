@@ -26,8 +26,8 @@ def signup(request):
     }
     return render(request,"store/signup.html",context)
 
-def product(request):
+def phones(request):
     context = {
 
     }
-    return render(request,"store/product.html",context)
+    return render(request,"store/phones.html",context)
