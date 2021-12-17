@@ -31,6 +31,6 @@ def signup(request):
 def phones(request):
     products = Product.objects.filter(category__name='Phones')
     context = {
-        'product': products.objects.all()
+        'product': products,
     }
     return render(request,"store/phones.html",context)
