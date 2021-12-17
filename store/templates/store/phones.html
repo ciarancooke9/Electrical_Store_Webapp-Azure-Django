@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
 <head>
   <title>FORTNITE</title>
   <meta charset="utf-8">
@@ -225,7 +226,7 @@
       {% for products in product %}
       <div class="card">
         <div class="card-picture">
-          <img class="card-img-top" src="{{products.image}}" alt="Card image">
+          <img class="card-img-top" src="{{products.image.url }}" alt="Card image">
         </div>
         <div class="card-body">
           <h4 class="card-title">{{ products.name }}</h4>
