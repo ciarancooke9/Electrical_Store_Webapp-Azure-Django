@@ -34,3 +34,17 @@ def phones(request):
         'product': products,
     }
     return render(request,"store/phones.html",context)
+
+def laptops(request):
+    products = Product.objects.filter(category__name='Laptops')
+    context = {
+        'product': products,
+    }
+    return render(request,"store/laptops.html",context)
+
+def essentials(request):
+    products = Product.objects.filter(category__name='Household Essentials')
+    context = {
+        'product': products,
+    }
+    return render(request,"store/essentials.html",context)
