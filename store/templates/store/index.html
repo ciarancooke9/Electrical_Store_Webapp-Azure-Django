@@ -177,8 +177,8 @@ footer a {
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="https://it-arch-practice-app.azurewebsites.net/store/phones/">Phones</a>
-        <a class="dropdown-item" href="#laptops">Laptops</a>
-        <a class="dropdown-item" href="#household">Household Essentials</a>
+        <a class="dropdown-item" href="https://it-arch-practice-app.azurewebsites.net/store/laptops/">Laptops</a>
+        <a class="dropdown-item" href="https://it-arch-practice-app.azurewebsites.net/store/essentials/">Household Essentials</a>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -275,42 +275,20 @@ footer a {
 <h2 id="phones"> Phones </h2>
   <div class="container">
     <div class="card-deck">
+      {% for products in phones %}
       <div class="card">
         <div class="card-picture">
-          <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQzwpS-foXxAzV8QUaD_wmUoXeDuCvGgPaAw&usqp=CAU" alt="Card image">
+          <img class="card-img-top" src="{{products.image.url }}" alt="Card image" height="200px">
         </div>
         <div class="card-body">
-          <h4 class="card-title">Product 1</h4>
+          <h4 class="card-title">{{ products.name }}</h4>
           <hr>
-          <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. .</p>
-          <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-          <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
+          <p class="card-text">{{products.description}}</p>
+          <a href="#" class="btn btn-primary stretched-link btn-block">${{ products.price }}</a>
+          <a href="https://it-arch-practice-app.azurewebsites.net/store/cart/" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
         </div>
       </div>
-      <div class="card">
-        <div class="card-picture">
-          <img class="card-img-top" src="https://www.casasbahia-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1465736890" alt="Card image">
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">Product 2</h4>
-          <hr>
-          <p class="card-text">Some example text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-          <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-          <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-picture">
-          <img class="card-img-top" src="https://www.casasbahia-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1925069232" alt="Card image">
-        </div>
-        <div class="card-body">
-          <h4 class="card-title">Product 3</h4>
-          <hr>
-          <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-          <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-          <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -318,42 +296,20 @@ footer a {
 
   <div class="container">
     <div class="card-deck">
+      {% for products in laptops %}
       <div class="card">
-      <div class="card-picture">
-        <img class="card-img-top" src="https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/xps_notebooks/xps_13_9310/general/xps-13_black_open-up-left-v2.jpg?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=664&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=664,402" alt="Card image">
+        <div class="card-picture">
+          <img class="card-img-top" src="{{products.image.url }}" alt="Card image" height="200px">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{ products.name }}</h4>
+          <hr>
+          <p class="card-text">{{products.description}}</p>
+          <a href="#" class="btn btn-primary stretched-link btn-block">${{ products.price }}</a>
+          <a href="https://it-arch-practice-app.azurewebsites.net/store/cart/" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
+        </div>
       </div>
-      <div class="card-body">
-        <h4 class="card-title">Product 4</h4>
-        <hr>
-        <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-        <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-picture">
-        <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/71an9eiBxpL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Card image">
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Product 5</h4>
-        <hr>
-        <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-        <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-picture">
-        <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/71vFKBpKakL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Card image">
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Product 6</h4>
-        <hr>
-        <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-        <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-      </div>
-    </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -361,42 +317,20 @@ footer a {
 
   <div class="container">
     <div class="card-deck">
+      {% for products in essentials %}
       <div class="card">
-      <div class="card-picture">
-        <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSearfJSC7iv-LlO0Rs5hDzOd0GU1HRpmC5kpObHBYouW1WCOeEq0dULx_LMIbFtYRrt90LGqgvKQ&usqp=CAc" alt="Card image">
+        <div class="card-picture">
+          <img class="card-img-top" src="{{products.image.url }}" alt="Card image" height="200px">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{ products.name }}</h4>
+          <hr>
+          <p class="card-text">{{products.description}}</p>
+          <a href="#" class="btn btn-primary stretched-link btn-block">${{ products.price }}</a>
+          <a href="https://it-arch-practice-app.azurewebsites.net/store/cart/" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
+        </div>
       </div>
-      <div class="card-body">
-        <h4 class="card-title">Product 4</h4>
-        <hr>
-        <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-        <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-picture">
-        <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSCKJIDv8LR9kQ7M305KQP0TVwmUO30Ac0kyF0oceK1eDK0Va6w6Wdl9A8QSrmjt-V9RCOKmYeSYg&usqp=CAc" alt="Card image">
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Product 5</h4>
-        <hr>
-        <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-        <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-picture">
-        <img class="card-img-top" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQiJ2HZQGiHUTM1NMMEVHcOi2_DcHUYXnI4S0JVoM1BmjC1IemrAuLwunR1S8lYj8dAhfTodETZKgA&usqp=CAc" alt="Card image">
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Product 6</h4>
-        <hr>
-        <p class="card-text">Some example text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-        <a href="#" class="btn btn-primary stretched-link btn-block">See More Details</a>
-        <a href="product.html" class="btn btn-secondary btn-lg btn-block btn-products"> Add to Cart </a>
-      </div>
-    </div>
+      {% endfor %}
     </div>
   </div>
 
